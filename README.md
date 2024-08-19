@@ -33,10 +33,6 @@ your-project/
 │   ├── styles/                # Archivos Sass organizados
 │   ├── App.jsx                # Componente principal de la aplicación
 │   └── index.js               # Punto de entrada de la aplicación
-├── tests/                     # Carpeta para pruebas unitarias
-│   └── components/            # Pruebas para componentes específicos
-├── babel.config.js            # Configuración de Babel
-├── jest.config.js             # Configuración de Jest
 ├── package.json               # Dependencias y scripts del proyecto
 ├── README.md                  # Documentación del proyecto
 └── package-lock.json          # Archivo de bloqueo de dependencias
