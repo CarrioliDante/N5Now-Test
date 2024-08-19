@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$nav-link-padding-y: 8px;
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+@import '../node_modules/bootstrap/scss/card';
+
+@import '../components/Navbar/Navbar.module.scss';
+@import '../components/ProductList/ProductList.module.scss';
+@import '../components/ProductCard/ProductCard.module.scss';
