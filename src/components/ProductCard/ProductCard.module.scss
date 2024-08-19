@@ -1,5 +1,5 @@
-@import '../../styles/variables'; // Asegúrate de que la ruta sea correcta
-@import '../../styles/mixins'; // Asegúrate de que la ruta sea correcta
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .card {
   max-width: 250px;
@@ -8,7 +8,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
-  background-color: $light-color; // Asumiendo que $light-color está definido en variables.scss
+  background-color: $light-color;
   padding: auto;
 
   &:hover {
