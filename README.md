@@ -2,6 +2,9 @@
 
 Proyecto de prueba de N5 Now
 
+Live test:
+https://n5-now-test.vercel.app/
+
 ## Características
 
 - Listado de productos con opción para agregar al carrito.
@@ -57,4 +60,32 @@ npm install
 ### Corre el proyecto
 ```bash
 npm run dev
+```
+
+### Ejercicio de lógica
+```javascript
+function reverseStringPreservingSpecialChars(str) {
+  let arr = str.split('');
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left < right) {
+    if (!/[a-zA-Z]/.test(arr[left])) {
+      left++;
+    } else if (!/[a-zA-Z]/.test(arr[right])) {
+      right--;
+    } else {
+      [arr[left], arr[right]] = [arr[right], arr[left]];
+      left++;
+      right--;
+    }
+  }
+  return arr.join('');
+}
+
+let str1 = "a,b$c";
+let str2 = "Ab,c,de!$";
+
+console.log(reverseStringPreservingSpecialChars(str1)); // "c,b$a"
+console.log(reverseStringPreservingSpecialChars(str2)); // "ed,c,bA!$"
 ```
