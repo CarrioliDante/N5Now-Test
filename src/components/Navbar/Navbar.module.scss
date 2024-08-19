@@ -5,12 +5,21 @@
   padding: 1rem 2rem;
   background-color: #141414;
   color: white;
-  position: relative;
 }
 
-.navbrand {
+.navleft {
+  flex: 1;
+}
+
+.navcenter {
+  flex: 1;
+  text-align: center;
+}
+
+.navright {
+  flex: 1;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
 
 .brand {
@@ -19,58 +28,42 @@
   text-decoration: none;
 }
 
-.center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.right {
-  display: flex;
-  align-items: center;
-}
-
 .navlinks {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0;
 }
 
-.navlinks .link {
-  color: white; /* Fuerza el color blanco */
+.link {
+  color: white;
   text-decoration: none;
   font-size: 1rem;
   display: flex;
   align-items: center;
-  font-weight: normal;
 
   &:hover {
     text-decoration: underline;
-    color: white;
   }
 
   &:focus,
-  &:active,
-  &:visited,
-  &:link {
+  &:active {
     color: white;
-    outline: none;
     text-decoration: none;
-    font-weight: bold;
   }
-}
-
-.navlinks .active {
-  font-weight: bold;
-  color: white;
-}
-
-.navlinks .link svg {
-  font-size: 1.5rem;
 }
 
 .cartWrapper {
   position: relative;
+}
+
+.cartCount {
+  background-color: red;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
 }
 
 .cartDropdown {
@@ -82,49 +75,24 @@
   color: #333;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 300px; // Aumenta el ancho para acomodar la imagen y el texto
+  width: 200px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 1rem;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    .cartItem {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-
-      .cartItemImage {
-        width: 40px; // Tamaño de la miniatura
-        height: 40px;
-        object-fit: cover;
-        margin-right: 10px;
-        border-radius: 4px;
-      }
-    }
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .cartWrapper:hover .cartDropdown {
   display: block;
 }
 
-.cartCount {
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  .cartItemImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+  }
 }

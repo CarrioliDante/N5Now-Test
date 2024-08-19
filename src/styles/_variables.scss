@@ -1,16 +1,22 @@
 // Colores
-$primary-color: #141414;
-$secondary-color: #a3a3a3;
-$success-color: #28a745;
-$danger-color: #dc3545;
-$warning-color: #ffc107;
-$info-color: #17a2b8;
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
 $light-color: #f8f9fa;
 $dark-color: #343a40;
-$info-text: #6c757d;
-
+$info-color: #17a2b8;
+$border-radius: 200px;
+$font-size-base: 1rem;
+$padding-small: 5px 10px;
+$transition-duration: 0.3s;
+$hover-color: #333;
+$navbar-bg-color: #141414;
+$link-color: white;
+$link-hover-color: #ddd;
+$cart-count-bg-color: red;
 $background-color: #fff;
 $text-color: #000000;
+$danger: rgb(248, 75, 75);
 
 $font-family-base: 'Roboto', sans-serif;
 $font-size-base: 16px;
@@ -23,3 +29,4 @@ $spacer-lg: 2rem;
 // Z-index
 $zindex-navbar: 1000;
 $zindex-modal: 1050;
+$transition-base: 0.3s ease-in-out;

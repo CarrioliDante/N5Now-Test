@@ -20,6 +20,9 @@ const productSlice = createSlice({
     error: null,
   },
   reducers: {
+    addProduct: (state, action) => {
+      state.items.push(action.payload)
+    },
     purchaseItems: (state, action) => {
       const purchasedItems = action.payload
       purchasedItems.forEach((purchasedItem) => {
@@ -27,7 +30,7 @@ const productSlice = createSlice({
           (item) => item.id === purchasedItem.id
         )
         if (product) {
-          product.stock -= purchasedItem.quantity
+          product.amount -= purchasedItem.quantity
         }
       })
     },
@@ -48,5 +51,5 @@ const productSlice = createSlice({
   },
 })
 
-export const { purchaseItems } = productSlice.actions
+export const { addProduct, purchaseItems } = productSlice.actions
 export default productSlice.reducer

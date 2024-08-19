@@ -9,49 +9,51 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbrand}>
-        <NavLink to='/' className={styles.brand}>
-          Mi Tienda
+      <div className={styles.navleft}>
+        <NavLink to='/add-product' className={styles.link}>
+          Agregar Producto
         </NavLink>
       </div>
-      <ul className={styles.navlinks}>
-        <li>
-          <NavLink to='/' className={styles.link}>
-            Home
-          </NavLink>
-        </li>
-        <li className={styles.cartWrapper}>
-          <NavLink to='/cart' className={styles.link}>
-            <FaShoppingCart />
-            {cartItems.length > 0 && (
-              <span className={styles.cartCount}>
-                {cartItems.length}
-              </span>
-            )}
-          </NavLink>
-          <div className={styles.cartDropdown}>
-            {cartItems.length > 0 ? (
-              <ul>
-                {cartItems.map((item) => (
-                  <li key={item.id} className={styles.cartItem}>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className={styles.cartItemImage}
-                    />
-                    <span>
-                      {item.name} - {item.quantity} unidad
-                      {item.quantity > 1 ? 'es' : ''}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>Tu carrito está vacío.</p>
-            )}
-          </div>
-        </li>
-      </ul>
+      <div className={styles.navcenter}>
+        <NavLink to='/' className={styles.brand}>
+          Home
+        </NavLink>
+      </div>
+      <div className={styles.navright}>
+        <ul className={styles.navlinks}>
+          <li className={styles.cartWrapper}>
+            <NavLink to='/cart' className={styles.link}>
+              <FaShoppingCart />
+              {cartItems.length > 0 && (
+                <span className={styles.cartCount}>
+                  {cartItems.length}
+                </span>
+              )}
+            </NavLink>
+            <div className={styles.cartDropdown}>
+              {cartItems.length > 0 ? (
+                <ul>
+                  {cartItems.map((item) => (
+                    <li key={item.id} className={styles.cartItem}>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className={styles.cartItemImage}
+                      />
+                      <span>
+                        {item.name} - {item.quantity} unidad
+                        {item.quantity > 1 ? 'es' : ''}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>Tu carrito está vacío.</p>
+              )}
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
